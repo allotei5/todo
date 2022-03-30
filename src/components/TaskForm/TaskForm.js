@@ -13,6 +13,7 @@ export const TaskForm = ({show, onHide, onAdd}) => {
     const [taskDescription, setTaskDescription] = useState("");
     const [category, setCategory] = useState(0);
     const [date, setDate] = useState("");
+    const [comment, setComment] = useState("");
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -22,12 +23,19 @@ export const TaskForm = ({show, onHide, onAdd}) => {
             status: "uncompleted",
             taskCategoryId: category,
             dateStarted: new Date().toDateString(),
-            dateEnded: date
+            dateEnded: date,
+            comments: (comment !== "") ? [{
+                message : comment,
+                created_on: new Date().toDateString(),
+                updated_on: new Date().toDateString()
+            }] : []
         });
         setTaskName("");
         setTaskDescription("");
         setCategory("");
         setDate("");
+        setComment("");
+        onHide();
     }
 
   return (
@@ -56,6 +64,10 @@ export const TaskForm = ({show, onHide, onAdd}) => {
                     <div className="mb-3">
                         <label htmlFor="exampleFormControlInput1" className="form-label">Due By</label>
                         <input type="date" className="form-control" id="exampleFormControlInput1" value={date} onChange={(e) => setDate(e.target.value)} />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Enter Comments</label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" onChange={(e) => setComment(e.target.value)} value={comment} rows="3"></textarea>
                     </div>
                     <button className="btn btn-primary" type="submit">Add new task</button>
                 </form>

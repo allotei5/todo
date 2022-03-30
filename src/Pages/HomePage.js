@@ -52,13 +52,25 @@ export const HomePage = () => {
         setTasks([...tasks, data])
     }
 
+    const editTask = async (task) => {
+        const res = await fetch(`http://localhost:5000/TaskCollection/${task.id}`, {
+            method: 'PUT',
+            body: JSON.stringify(task),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        });
+        const data = await res.json();
+        setTasks(tasks.map(prevState => prevState.id === data.id ? data : prevState));
+    }
+
   return (
     <div className='custom-container' style={{marginTop: "15px"}}>
         <h2>TODO APP</h2>
         <div>
             <button type="button" className="btn btn-primary" style={{marginBottom: "15px"}} onClick={() => displayFormModal()}>Add New Task</button>
             <TaskForm show={isFormModalOpen} onHide={closeFormModal} onAdd={addTask}/>
-            <Tasks tasks={tasks} onDelete={deleteTask}/>
+            <Tasks tasks={tasks} onDelete={deleteTask} editTask={editTask}/>
         </div>
     </div>
   )
