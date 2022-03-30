@@ -1,0 +1,75 @@
+{
+  "TaskCategoryCollection": [
+    {
+      "id": 5,
+      "name": "Personal",
+      "createdOn": "2021-09-23T10:30:37.939Z",
+      "updatedOn": "2021-09-23T10:30:37.939Z"
+    },
+    {
+      "id": 6,
+      "name": "Professional",
+      "createdOn": "2021-09-23T10:30:37.939Z",
+      "updatedOn": "2021-09-23T10:30:37.939Z"
+    },
+    {
+      "id": 7,
+      "name": "School",
+      "createdOn": "2021-09-23T10:30:37.939Z",
+      "updatedOn": "2021-09-23T10:30:37.939Z"
+    },
+    {
+      "name": "Project",
+      "createdOn": "2022-3-29 23:35:40",
+      "updatedOn": "2022-3-29 23:35:40",
+      "id": 8
+    },
+    {
+      "name": "mmhm",
+      "createdOn": "2022-3-29 23:36:23",
+      "updatedOn": "2022-3-29 23:36:23",
+      "id": 9
+    }
+  ],
+  "TaskCollection": [
+    {
+      "id": 2,
+      "title": "Learn React hooks",
+      "description": "Learn all the new awesome react hooks...",
+      "status": "completed",
+      "taskCategoryId": 1,
+      "comments": [
+        {
+          "message": "Hmm, useState is awesome",
+          "createdOn": "2021-09-25T10:30:37.939Z",
+          "updatedOn": "2021-09-25T10:30:37.939Z"
+        },
+        {
+          "message": "Hmm, memo is awesome",
+          "createdOn": "2021-09-26T10:30:37.939Z",
+          "updatedOn": "2021-09-26T10:30:37.939Z"
+        }
+      ],
+      "dateStarted": "2021-09-24T10:30:37.939Z",
+      "dateEnded": "2021-09-28T10:30:37.939Z"
+    },
+    {
+      "title": "asdf",
+      "description": "qwer",
+      "status": "uncompleted",
+      "taskCategoryId": "1",
+      "dateStarted": "Wed Mar 30 2022",
+      "dateEnded": "2022-03-31",
+      "id": 3
+    },
+    {
+      "title": "finish this app",
+      "description": "I'm in painnn",
+      "status": "uncompleted",
+      "taskCategoryId": "1",
+      "dateStarted": "Wed Mar 30 2022",
+      "dateEnded": "2022-03-31",
+      "id": 4
+    }
+  ]
+}
