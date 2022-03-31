@@ -17,13 +17,13 @@ export const HomePage = () => {
     }, [])
 
     const fetchTasks = async () => {
-        const res = await fetch("http://localhost:5000/TaskCollection");
+        const res = await fetch("https://pacific-depths-61320.herokuapp.com/TaskCollection");
         const data = await res.json();
         return data;
     }
 
     const deleteTask = async (id) => {
-        await fetch(`http://localhost:5000/TaskCollection/${id}`, {
+        await fetch(`https://pacific-depths-61320.herokuapp.com/TaskCollection/${id}`, {
             method: 'DELETE'
         })
         setTasks(tasks.filter((task) => task.id !== id))
@@ -40,7 +40,7 @@ export const HomePage = () => {
     const addTask = async (task) => {
         console.log(task);
 
-        const res = await fetch("http://localhost:5000/TaskCollection", {
+        const res = await fetch("https://pacific-depths-61320.herokuapp.com/TaskCollection", {
             method: "POST",
             headers: {
                 'Content-type': 'application/json'
@@ -53,7 +53,7 @@ export const HomePage = () => {
     }
 
     const editTask = async (task) => {
-        const res = await fetch(`http://localhost:5000/TaskCollection/${task.id}`, {
+        const res = await fetch(`https://pacific-depths-61320.herokuapp.com/TaskCollection/${task.id}`, {
             method: 'PUT',
             body: JSON.stringify(task),
             headers: {
@@ -65,7 +65,7 @@ export const HomePage = () => {
     }
 
   return (
-    <div className='custom-container' style={{marginTop: "15px"}}>
+    <div className='custom-container container' style={{marginTop: "15px"}}>
         <h2>TODO APP</h2>
         <div>
             <button type="button" className="btn btn-primary" style={{marginBottom: "15px"}} onClick={() => displayFormModal()}>Add New Task</button>

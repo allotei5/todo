@@ -37,7 +37,7 @@
       "title": "Learn React hooks",
       "description": "Learn all the new awesome react hooks...",
       "taskCategoryId": 1,
-      "status": "",
+      "status": "completed",
       "comments": [
         {
           "message": "Hmm, useState is awesome",
@@ -55,43 +55,25 @@
           "message": "hi",
           "created_on": "Wed Mar 30 2022",
           "updated_on": "Wed Mar 30 2022"
-        }
-      ]
-    },
-    {
-      "title": "asdf",
-      "description": "qwer",
-      "status": "uncompleted",
-      "taskCategoryId": "1",
-      "dateStarted": "Wed Mar 30 2022",
-      "dateEnded": "2022-03-31",
-      "id": 3
-    },
-    {
-      "title": "finish this app",
-      "description": "I'm in painnn",
-      "status": "uncompleted",
-      "taskCategoryId": "1",
-      "dateStarted": "Wed Mar 30 2022",
-      "dateEnded": "2022-03-31",
-      "id": 4
-    },
-    {
-      "id": 5,
-      "title": "as",
-      "description": "asd",
-      "taskCategoryId": "5",
-      "status": "",
-      "comments": [
-        {
-          "message": "asdf",
-          "created_on": "Wed Mar 30 2022",
-          "updated_on": "Wed Mar 30 2022"
         },
         {
           "message": "",
           "created_on": "Wed Mar 30 2022",
           "updated_on": "Wed Mar 30 2022"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Finish this app",
+      "description": "Hope this works",
+      "taskCategoryId": "6",
+      "status": "completed",
+      "comments": [
+        {
+          "message": "lorem ipsum dolor ...",
+          "created_on": "Thu Mar 31 2022",
+          "updated_on": "Thu Mar 31 2022"
         }
       ]
     }

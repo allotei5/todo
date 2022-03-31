@@ -26,12 +26,12 @@ export const TaskLists = ({task, onDelete, editTask}) => {
   }
 
   return (
-    <div style={{height: "75px", backgroundColor: "#F8F9FA", borderRadius: "5px", padding: "25px", marginBottom: "10px"}}>
+    <div style={{height: "75px", backgroundColor: "#F8F9FA", borderRadius: "5px", padding: "25px", marginBottom: "10px", border: (task.status === 'completed') ? "1px solid green" : "1px solid red"}}>
         <div className='row'>
-          <div className="col-9">
+          <div className="col-lg-9 col-md-9 col-sm-9">
             {task.title}
           </div>
-          <div className="col icons">
+          <div className="col-lg col-md col-sm icons">
             <AiFillEye color='blue' onClick={() => showViewModal()}/>
             <ViewTaskModal show={isViewModalOpen} onHide={hideViewModal} task={task}/>
             <AiFillEdit color='green' onClick={() => showEditModal()} />

@@ -17,7 +17,7 @@ export const CategoryPage = () => {
   }, [])
 
   const fetchCategories = async () => {
-    const res = await fetch('http://localhost:5000/TaskCategoryCollection')
+    const res = await fetch('https://pacific-depths-61320.herokuapp.com/TaskCategoryCollection')
     const data = await res.json();
     return data;
   }
@@ -30,7 +30,7 @@ export const CategoryPage = () => {
     let dateTime = cDate + ' ' + cTime;
     const newCategory = { name: category.text, createdOn:dateTime, updatedOn:dateTime};
 
-    const res = await fetch("http://localhost:5000/TaskCategoryCollection", {
+    const res = await fetch("https://pacific-depths-61320.herokuapp.com/TaskCategoryCollection", {
       method: "POST",
       headers: {
         'Content-type': 'application/json'
@@ -52,7 +52,7 @@ export const CategoryPage = () => {
   }
 
   return (
-    <div className='custom-container'>
+    <div className='custom-container container'>
         <h3>Categories</h3>
         <p>Add Categories</p>
         <AddCategory onAdd={addCategory}/>

@@ -14,7 +14,7 @@ export const CategoryOption = () => {
   }, [])
 
   const fetchCategories = async () => {
-    const res = await fetch('http://localhost:5000/TaskCategoryCollection')
+    const res = await fetch('https://pacific-depths-61320.herokuapp.com/TaskCategoryCollection')
     const data = await res.json();
     return data;
   }
